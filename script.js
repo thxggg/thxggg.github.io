@@ -5,14 +5,18 @@
 
     if (stored === "dark") {
         document.body.classList.add("dark");
-        toggleBtn.textContent = "☀️";
+        if (toggleBtn) {
+            toggleBtn.textContent = "☀️";
+        }
     }
 
-    toggleBtn.addEventListener("click", () => {
-        const isDark = document.body.classList.toggle("dark");
-        window.localStorage.setItem("theme", isDark ? "dark" : "light");
-        toggleBtn.textContent = isDark ? "☀️" : "🌙";
-    });
+    if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+            const isDark = document.body.classList.toggle("dark");
+            window.localStorage.setItem("theme", isDark ? "dark" : "light");
+            toggleBtn.textContent = isDark ? "☀️" : "🌙";
+        });
+    }
 
     // Footer year
     const yearSpan = document.getElementById("year");
@@ -20,4 +24,3 @@
         yearSpan.textContent = new Date().getFullYear();
     }
 })();
-

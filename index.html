@@ -4,30 +4,54 @@
     <meta charset="UTF-8" />
     <title>Your Name</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <div class="page">
 
-    <header class="site-header">
-        <div class="header-left">
-            <h1 class="site-title">Your Name</h1>
-            <p class="site-subtitle">
-                PhD Student / MSc Student / Researcher · Your Institution
+    <header class="hero">
+        <div class="hero-content">
+            <div class="eyebrow">Researcher · Builder · Photographer</div>
+            <h1 class="hero-title">Your Name</h1>
+            <p class="hero-lead">
+                Systems researcher exploring how distributed intelligence, compilers,
+                and human-computer interaction can be woven into responsive, trustworthy tools.
             </p>
-            <p class="site-meta">
-                <span>your.email@example.com</span> ·
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a> ·
-                <a href="cv.pdf" target="_blank">CV</a>
-            </p>
+            <div class="hero-chips">
+                <span class="pill">Distributed Systems</span>
+                <span class="pill">LLMs for Ops</span>
+                <span class="pill">Compiler Tooling</span>
+            </div>
+            <div class="hero-actions">
+                <a class="btn primary" href="mailto:your.email@example.com">Email</a>
+                <a class="btn ghost" href="cv.pdf" target="_blank" rel="noreferrer">CV</a>
+                <a class="btn ghost" href="https://github.com/yourusername" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">06+</div>
+                    <div class="stat-label">Publications / preprints</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">03</div>
+                    <div class="stat-label">Systems shipped</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Photos captured</div>
+                </div>
+            </div>
         </div>
-
-        <div class="header-right">
-            <img
-                src="avatar.jpg"
-                alt="Your portrait"
-                class="avatar"
-            />
+        <div class="hero-visual">
+            <div class="photo-frame primary">
+                <img src="images/portrait.jpg" alt="Your portrait" />
+            </div>
+            <div class="photo-frame secondary">
+                <img src="images/in-field.jpg" alt="Field or candid photo" />
+            </div>
             <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
                 🌙
             </button>
@@ -39,39 +63,71 @@
         <a href="#research">Research</a>
         <a href="#projects">Projects</a>
         <a href="#publications">Publications</a>
+        <a href="#photos">Photos</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <main>
         <!-- About -->
         <section id="about" class="section">
-            <h2>About Me</h2>
-            <p>
-                This is a short academic bio. Describe your current status (e.g., 
-                "I am a Master's student in Computer Science at Your University"),
-                your research interests, and what problems you are excited about.
-            </p>
+            <div class="section-header">
+                <div class="eyebrow">Profile</div>
+                <h2>About Me</h2>
+                <p class="muted">
+                    A crisp summary of who you are and what you care about. Mention your current position,
+                    the lab / group you work with, and the problems you obsess over.
+                </p>
+            </div>
+            <div class="cards two-col">
+                <div class="card">
+                    <h3>Current</h3>
+                    <p>
+                        “I am a Master's student in Computer Science at Your University,
+                        focusing on adaptive systems and compiler-driven optimizations for AI workloads.”
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>What I'm exploring</h3>
+                    <ul class="bullet-list">
+                        <li>Making distributed training safer and more observable.</li>
+                        <li>Turning LLMs into practical assistants for operations teams.</li>
+                        <li>Designing tools that make research workflows calmer and faster.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <!-- Research Interests -->
         <section id="research" class="section">
-            <h2>Research Interests</h2>
+            <div class="section-header">
+                <div class="eyebrow">Interests</div>
+                <h2>Research Threads</h2>
+                <p class="muted">Topics and questions I revisit often.</p>
+            </div>
             <ul class="tag-list">
                 <li>Distributed Systems</li>
                 <li>Compilers</li>
                 <li>Large Language Models</li>
                 <li>Systems for Machine Learning</li>
+                <li>Observability</li>
+                <li>Human–Computer Interaction</li>
             </ul>
         </section>
 
         <!-- Projects -->
         <section id="projects" class="section">
-            <h2>Selected Projects</h2>
+            <div class="section-header">
+                <div class="eyebrow">Work</div>
+                <h2>Selected Projects</h2>
+                <p class="muted">
+                    A snapshot of systems and prototypes. Link to code, demos, or write-ups.
+                </p>
+            </div>
 
-            <article class="item">
+            <article class="item card">
                 <div class="item-header">
                     <h3>Project Title One</h3>
-                    <span class="item-meta">2024 · Role: Lead Developer</span>
+                    <span class="item-meta">2024 · Lead Developer</span>
                 </div>
                 <p>
                     One–two sentence description of the project. Focus on the goal,
@@ -83,10 +139,10 @@
                 </p>
             </article>
 
-            <article class="item">
+            <article class="item card">
                 <div class="item-header">
                     <h3>Project Title Two</h3>
-                    <span class="item-meta">2023 · Role: Research Intern</span>
+                    <span class="item-meta">2023 · Research Intern</span>
                 </div>
                 <p>
                     Another short description highlighting system design, algorithms,
@@ -97,9 +153,13 @@
 
         <!-- Publications -->
         <section id="publications" class="section">
-            <h2>Publications & Writing</h2>
+            <div class="section-header">
+                <div class="eyebrow">Writing</div>
+                <h2>Publications & Notes</h2>
+                <p class="muted">Papers, preprints, and selected essays.</p>
+            </div>
 
-            <article class="item">
+            <article class="item card">
                 <div class="item-header">
                     <h3>Paper Title, Conference Name</h3>
                     <span class="item-meta">Author1, Author2, <strong>You</strong>, 2024</span>
@@ -115,19 +175,56 @@
             </article>
         </section>
 
+        <!-- Photo gallery -->
+        <section id="photos" class="section">
+            <div class="section-header">
+                <div class="eyebrow">Photo Journal</div>
+                <h2>Recent Frames</h2>
+                <p class="muted">
+                    A rotating wall for your favorite shots. Replace the sample sources with your own files
+                    under <code>images/</code> or <code>photos/</code>.
+                </p>
+            </div>
+            <div class="gallery-grid">
+                <figure class="gallery-card tall">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Skyline at dusk" />
+                    <figcaption>City blue hour · 2024</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1529059997568-3b1abb2e0f66?auto=format&fit=crop&w=800&q=80" alt="Misty mountains" />
+                    <figcaption>Misty ridge · 2024</figcaption>
+                </figure>
+                <figure class="gallery-card wide">
+                    <img src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?auto=format&fit=crop&w=1200&q=80" alt="Ocean horizon" />
+                    <figcaption>Long exposure coastline · 2023</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=800&q=80" alt="Forest trail" />
+                    <figcaption>Quiet trail · 2024</figcaption>
+                </figure>
+            </div>
+        </section>
+
         <!-- Contact -->
         <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>
-                The best way to reach me is by email:
-                <a href="mailto:your.email@example.com">your.email@example.com</a>.
-            </p>
-            <p>
-                You can also find me on
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-                and
-                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>.
-            </p>
+            <div class="section-header">
+                <div class="eyebrow">Contact</div>
+                <h2>Say hello</h2>
+                <p class="muted">The best way to reach me is by email.</p>
+            </div>
+            <div class="cards two-col">
+                <div class="card">
+                    <h3>Email</h3>
+                    <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                </div>
+                <div class="card">
+                    <h3>Elsewhere</h3>
+                    <p>
+                        <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">GitHub</a> ·
+                        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noreferrer">LinkedIn</a>
+                    </p>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -139,4 +236,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
