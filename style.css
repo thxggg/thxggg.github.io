@@ -109,6 +109,13 @@ body {
     border: 1px solid rgba(43, 108, 255, 0.3);
 }
 
+.pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
 .hero-actions {
     display: flex;
     align-items: center;
@@ -128,6 +135,12 @@ body {
     border: 1px solid transparent;
     cursor: pointer;
     transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn.compact {
+    padding: 8px 12px;
+    font-size: 14px;
+    box-shadow: none;
 }
 
 .btn.primary {
@@ -350,11 +363,85 @@ body {
     text-decoration: underline;
 }
 
+.timeline-card h3 {
+    margin-top: 0;
+}
+
+.timeline {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0 0 0 10px;
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--border), rgba(43, 108, 255, 0.35), var(--border));
+}
+
+.timeline li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items: start;
+    position: relative;
+}
+
+.timeline li + li {
+    margin-top: 12px;
+}
+
+.timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background: linear-gradient(120deg, var(--accent), var(--accent-2));
+    border: 2px solid var(--surface);
+    box-shadow: 0 6px 14px rgba(43, 108, 255, 0.22);
+    position: relative;
+    left: -7px;
+    top: 2px;
+}
+
+.timeline .item-meta {
+    color: var(--accent);
+    font-weight: 600;
+}
+
 .gallery-grid {
     margin-top: 14px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 14px;
+}
+
+.photo-callout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    background: linear-gradient(120deg, rgba(43, 108, 255, 0.07), rgba(94, 196, 255, 0.07));
+}
+
+.photo-callout .pill-row {
+    margin-top: 8px;
+}
+
+.callout-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.callout-actions .btn {
+    box-shadow: none;
 }
 
 .gallery-card {
